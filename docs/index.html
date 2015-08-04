@@ -1,0 +1,698 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Freelance Cockpit 2 - Project Management System</title>
+	
+	<meta name="description" content="Thank you for purchasing Freelance Cockpit 2. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form. Thanks so much!">
+	<meta name="author" content="Luxsys">
+	<meta name="copyright" content="Luxsys">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2013-03-05T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="css/favicon.ico" />
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#008C9E;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ol{border-top:1px solid #212424;}
+		#documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ol a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ol a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#system_requrements">System Requrements</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#local_server_installation">Local Server Installation</a></li>
+			<li><a href="#first_steps">First Steps</a></li>
+			<li><a href="#cronjob">Cronjob</a></li>
+			<li><a href="#paypal_ipn">Paypal IPN</a></li>
+			<li><a href="#faq">FAQ</a></li>
+			<li><a href="#sources_and_credits">Sources and Credits</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Luxsys 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Freelance Cockpit 2</h1><h2>Project Management System</h2><hr><ul><li>Created: 02/24/2013</li><li>latest Update: 07/07/2013</li><li>By: Luxsys</li><li><a href=""></a></li><li>Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#117;&#120;&#115;&#121;&#115;&#45;&#97;&#112;&#112;&#115;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#117;&#120;&#115;&#121;&#115;&#45;&#97;&#112;&#112;&#115;&#46;&#99;&#111;&#109;</a></li></ul><p>Thank you for purchasing Freelance Cockpit 2. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form. Thanks so much!</p></section><section id="system_requrements">
+	<h3>System Requrements</h3><hr class="notop">
+<p>
+	Your server need to meet the following requirements in order to run Freelance Cockpit 2.</p>
+<ul style="margin: 0px 1.5em 1.5em 3.5em; padding: 0px; border: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 19px;">
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP 5.3+</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		MYSQL 5+</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP Mcrypt Extention</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP MBString Extension</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP DOM Extension</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP GD Extension</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP MYSQL Extension</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP PDO Extention</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		PHP CURL Extention</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Cronjob (in order to activate recurring invoices)</li>
+</ul>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	&nbsp;</p>
+</section>
+<section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<ol>
+	<li>
+		<p>
+			Connect to your web server using any FTP program (ie. FileZilla) or the webinterface of your webhost and upload all files and folders which are inside the &quot;<strong>FC2 Application</strong>&quot; folder from the .zip file you have downloaded from Codecanyon. If you like to install Freelance Cockpit 2 on your local computer using WAMP, make sure you first read&nbsp;<a href="#localserverinstallation">Local Server Installation&nbsp;<br>
+			<br>
+			<img alt="" src="assets/images/image_12.png" style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px; width: 791px; height: 376px;"></a><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">The folder &quot;files&quot; and it&#39;s subfolders must have write permissions, so just give the folder write permissions (777).<br>
+			<br>
+			<img alt="" src="assets/images/image_11.png" style="width: 416px; height: 361px;"></span><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">Go to your web browser and enter your domain plus &quot;/install&quot; i.e.&nbsp;</span><i style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">http://www.your-domain.com/install</i></p>
+	</li>
+	<li>
+		<p>
+			<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">Your System will now be checked. If your server meets all requirements, go ahead to the next step. If you have warning messages go to&nbsp;</span><a href="#faq" style="margin: 0px; padding: 0px; border: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; color: rgb(0, 0, 153); line-height: 19px;">FAQ</a><span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">.</span><br>
+			<br>
+			<img alt="" src="assets/images/image_2.png" style="width: 648px; height: 632px;"><br>
+			<br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			Enter your item purchase code. Click on the blue icon to get an idea where you can find your item purchase code.<br>
+			<br>
+			<img alt="" src="assets/images/image_3.png" style="width: 644px; height: 438px;"><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">Enter your MYSQL configuration. If the database you entered does not exist, the system will try to create it. This might not work when your webhost does not allow to create new databases. Please use an existing database in this case or create the database using the web interface of your webhost.<br>
+			<br>
+			<img alt="" src="assets/images/image_4.png" style="width: 642px; height: 555px;"><br>
+			<br>
+			<img alt="" src="assets/images/image_5.png" style="font-family: Arial, Verdana, sans-serif; font-size: 12px; line-height: normal; width: 643px; height: 358px;"></span><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			Fill the form with your details.<br>
+			<br>
+			<img alt="" src="assets/images/image_6.png" style="width: 643px; height: 1152px;"><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			That&#39;s it! Now go to the login page and log yourself in.<br>
+			<br>
+			<img alt="" src="assets/images/image_7.png" style="width: 641px; height: 404px;"><br>
+			&nbsp;</p>
+	</li>
+	<li>
+		<p>
+			If you get an error <strong>404</strong> or <strong>500</strong> page after clicking on "Login", means that you need to change your <b>.htaccess</b> file. <br>Just search for your error on the <a href="http://codecanyon.net/item/freelance-cockpit-2-project-management/4203727/support"><b>FAQ</b></a> page and change the .htaccess file as descried. Feel free to contact me via <a href="http://codecanyon.net/user/Luxsys#contact" target="_blank"><b>my profile page</b></a> if you are not sure which .htaccess configuration you need to use.<br><br>
+			<img alt="" src="assets/images/error404.png" style="border:1px solid #888888"><br>
+			<br>
+			</p>
+	</li>
+</ol>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="local_server_installation">
+	<h3>Local Server Installation</h3><hr class="notop">
+<h3>
+	WAMP Server</h3>
+<p>
+	If you like to install Freelance Cockpit 2 on your local machine using <strong>WAMP</strong> Server you need to make sure to enable the apache rewrite_module. Click on the WAMP icon in your taskbar and click on <em>Apache -&gt; Apache modules -&gt; rewrite_module</em></p>
+<p>
+	<img alt="" src="assets/images/image_47.png" style="width: 403px; height: 340px;"><br>
+	&nbsp;</p>
+<p>
+	When the rewrite_module is not active you will get the following error message if you try to access the Freelance Cockpit installation tool.</p>
+<pre style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium;">
+<strong>Internal Server Error</strong>
+The server encountered an internal error or misconfiguration and was unable to complete your request.
+Please contact the server administrator, admin@localhost and inform them of the time the error occurred, and anything you might have done that may have caused the error.
+More information about this error may be available in the server error log.</pre>
+<p>
+	&nbsp;</p>
+<p>
+	You also need to make sure that the Curl extention is loaded. Just open your php.ini (...wamp\bin\apache\apache2.2.22\bin\php.ini) and remove the semicolon in front of the following extention: &nbsp;<strong>extension=php_curl.dll</strong></p>
+<p>
+	<br>
+	<img alt="" src="http://envato.luxsys-apps.com/instruction/curl_extention.PNG" style="width: 340px; height: 166px; border-width: 1px; border-style: solid;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="first_steps">
+	<h3>First Steps</h3><hr class="notop">
+<ol>
+	<li>
+		<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">Login using &quot;admin&quot; and &quot;password&quot;.</span><br>
+		<br>
+		<img alt="" src="assets/images/image_13.png" style="width: 950px; height: 548px;"><br>
+		<br>
+		&nbsp;</li>
+	<li>
+		Click on John Doe in the left upper corner and change your password and personal details like first name etc.<br>
+		<br>
+		<img alt="" src="assets/images/image_23.png"><br>
+		<img alt="" src="assets/images/image_34.png" style="width: 950px; height: 501px;"><br>
+		<br>
+		&nbsp;</li>
+	<li>
+		Now go to Settings and change the default configuration so it fits your needs.<br>
+		<br>
+		<img alt="" src="assets/images/image_30.png" style="width: 950px; height: 729px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Now go to &quot;Clients&quot; and create a &quot;New Company&quot;.<br>
+		<br>
+		<img alt="" src="assets/images/image_41.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Fill in all details and click on &quot;Save&quot;<br>
+		<br>
+		<img alt="" src="assets/images/image_42.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You new client company has been created. Click on &quot;Add Contact&quot; in order to create a contact. Client contacts can login to the client area.&nbsp;<br>
+		<br>
+		<img alt="" src="assets/images/image_43.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Fill in all the contact details and grant permissions to the modules the client contact should have access to if they login to the client area. If you leave the &quot;Profile Picture&quot; blank the system will look for a <a href="https://en.gravatar.com/">Gravatar</a> using the email address of the client contact.<br>
+		<br>
+		<img alt="" src="assets/images/image_44.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		If you want to delete or edit a client contact, use the &quot;Action&quot; buttons on the right.</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Go to &quot;Projects&quot; and create a new project.<br>
+		<br>
+		<img alt="" src="assets/images/image_45.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Just fill in all details and select if the process should be calculated via the tasks (<strong>Calculate progress). </strong>If you enable it you won&#39;t be able to set the progress manually!<br>
+		<br>
+		<img alt="" src="assets/images/image_46.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		In order to quickly access your project you can add it to the &quot;Quick Access&quot; list by just clicking the &quot;Add to Quick Access&quot; button on top. The project should appear on the left &quot;Quick Access&quot; list.</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		The time you spent on a project can be tracked with every single project. Just use the timer button on top of the project overview. If you click on start the timer will run even if you close your browser. It will run until you click on stop, if you click on start again the timer will resume from the time you have stopped it.</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Click on &quot;Add task&quot; on the right hand side to add a new task to the project. Select if the task will be visible for the client and &nbsp;to whom you like to assign the task to.<br>
+		<br>
+		<img alt="" src="assets/images/image_14.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		On the media table you can upload and share files with your clients. The upload is not restricted to any file type or size. Your client can also upload files and leave comments.<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You can also assign projects to agents.<br>
+		<br>
+		<img alt="" src="assets/images/image_15.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Just go to Invoices and create a new invoice.&nbsp;<br>
+		<br>
+		<img alt="" src="assets/images/image_16.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Fill all fields and click on save. The discount value can either be a normal value or percentage if you add the <strong>%</strong>&nbsp;symbol.<br>
+		<br>
+		<img alt="" src="assets/images/image_17.png" style="width: 950px; height: 501px;"></li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Click on the row of the invoice you have just created to get to the Invoice overview. Here you can add items, preview the invoice and send it directly to the assigned client. The invoice status will change automatically to &quot;Sent&quot; if you send the invoice to the client. The &quot;Send Invoice to Client&quot; button will be hidden when you mark the invoice as &quot;Paid&quot; or if your client has paid via paypal.<br>
+		<br>
+		<br>
+		<img alt="" src="assets/images/image_18.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Click &quot;Add Item&quot; in order to add your new item.<br>
+		<br>
+		<img alt="" src="assets/images/image_18.png" style="width: 950px; height: 501px;"><br>
+		<br>
+		<img alt="" src="assets/images/image_19.png" style="width: 950px; height: 501px;"><br>
+		<br>
+		<img alt="" src="assets/images/image_20.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Go to Subscriptions and create a new subscription.&nbsp;<br>
+		<br>
+		<img alt="" src="assets/images/image_21.png" style="width: 950px; height: 501px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Fill all fields and choose a frequency for the recurring invoices.<br>
+		<br>
+		<img alt="" src="assets/images/image_22.png" style="width: 950px; height: 501px;"></li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Add a new item to the Subscription.<br>
+		<br>
+		<img alt="" src="assets/images/image_24.png" style="width: 950px; height: 501px;"><br>
+		<br>
+		<img alt="" src="assets/images/image_25.png" style="width: 950px; height: 501px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		The next payment shows you the date when the next invoice will be created (cronjob needs to be running).<br>
+		<br>
+		<img alt="" src="assets/images/image_26.png" style="width: 442px; height: 295px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		If you have Paypal activated your client can subscribe via Paypal.<br>
+		<br>
+		<img alt="" src="assets/images/image_27.png" style="width: 352px; height: 255px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		On Quotations you can view the quotation form and send the link to your potential clients so they can submit a quotation request.<br>
+		<br>
+		<img alt="" src="assets/images/image_28.png" style="width: 950px; height: 522px;"><br>
+		<br>
+		<img alt="" src="assets/images/image_29.png" style="width: 950px; height: 1281px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		The settings page will give you access to all the important system settings.<br>
+		<br>
+		<img alt="" src="assets/images/image_30.png" style="width: 950px; height: 729px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You can edit all email templates via the <em>Templates tab.<br>
+		<br>
+		<img alt="" src="assets/images/image_31.png" style="width: 950px; height: 522px;"></em><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		If you like to use Paypal make sure you have activated the paypal feature.<br>
+		<br>
+		<img alt="" src="assets/images/image_32.png" style="width: 950px; height: 522px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You can create new users on the users tab. in order to create a new user click on &quot;New User&quot;.<br>
+		<br>
+		<img alt="" src="assets/images/image_33.png" style="width: 950px; height: 522px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Make sure you select the required module permissions. Admins can see all projects. Non admins can only see projects they are assigned to.<br>
+		<br>
+		<img alt="" src="assets/images/image_35.png" style="width: 950px; height: 522px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		If a system update is available you can download and install it right from the &quot;System Updates&quot;.<br>
+		<br>
+		<img alt="" src="assets/images/image_36.png" style="width: 950px; height: 522px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You can make a database update with a simple click on &quot;Backup Database&quot;. If you wan&#39;t to restore a previous update just click on &quot;Restore Database&quot;.<br>
+		<br>
+		<img alt="" src="assets/images/image_37.png" style="width: 950px; height: 522px;"><br>
+		&nbsp;<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Please go to <a href="#Cronjob">Cronjob</a>&nbsp;in order to setup automatic tasks (required for subscriptions).<br>
+		<br>
+		<img alt="" src="assets/images/image_38.png" style="width: 950px; height: 522px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		You can edit the css style directly via the &quot;Customize&quot; tab.&nbsp;<br>
+		<br>
+		<img alt="" src="assets/images/image_39.png" style="width: 950px; height: 522px;"><br>
+		<br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Here you can check the log entrys. Make sure you clear the log from time to time.<br>
+		<br>
+		<img alt="" src="assets/images/image_40.png" style="width: 950px; height: 522px;"><br>
+		&nbsp;</li>
+
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Now go to the Ticket tab.<br>
+		<br>
+		<img alt="" src="assets/images/image_48.png" style="width: 950px;"><br>
+		&nbsp;</li>
+
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		The email settings depends to your email server. If you want to use a gmail (google mail) account, your settings should look like like on the screenshot below. You also need to make sure you have <a href="https://support.google.com/mail/troubleshooter/1668960?hl=en" target="_blank">enabled imap in your gmail account</a>.<br>
+		<br>
+		<img alt="" src="assets/images/image_49.png"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Now you can go to Tickets where you can see and create tickets. The star indicates a new unread note which has been added to a ticket if it is assigned to you.<br>
+		<br>
+		<img alt="" src="assets/images/image_50.png" style="width: 950px;"><br>
+		&nbsp;</li>
+	<li style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		On the left you can see all the ticket details. The right side contains the ticket content and notes.<br>
+		<br>
+		<img alt="" src="assets/images/image_51.png" style="width: 950px;"><br>
+		&nbsp;</li>
+</ol>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="cronjob">
+	<h3>Basic Cronjob</h3><hr class="notop">
+<p>
+	The basic cronjob should run at least once a day and is used in order to activate automated tasks like recurring invoices (subscriptions) and automatic database backup. Please refer to your web host providers FAQ in order to find out how to setup a cronjob/crontab (if your hosting package includes cronjobs).</p>
+<p>
+	The command should look like this: <strong>wget http://www.your-domain.com/cronjob</strong></p>
+<p>
+	Your hosting package does not include cronjob/crontab? No problem! There are many websites who offer free cronjob services. One of them is <a href="http://www.setcronjob.com">www.setcronjob.com</a>.</p>
+<br>
+<h3 id="emailticketcronjob">Email Ticket Cronjob</h3>
+<p>
+	The email ticket cronjob should run every 10 minutes and is used in order to activate email tickets.</p>
+	<p>
+	The command should look like this (you can find your cronjob command in Settings->Ticket->Postmaster cronjob link): <strong>wget http://www.your-domain.com/postmaster -O /dev/null</strong></p>
+<br>
+<h3>
+	How to setup a cronjob in Plesk</h3>
+<p>
+	If your web server is running Plesk you can check out the following instruction:</p>
+<p>
+	&nbsp;</p>
+<p>
+	1. Go to <em>Tools and Settings</em> -&gt; <em>Scheduled Tasks</em></p>
+<p>
+	<img alt="" src="assets/images/image_8.png" style="width: 519px; height: 485px;"><br>
+	<br>
+	&nbsp;</p>
+<p>
+	2. Click on <em>Add new Task</em></p>
+<p>
+	<img alt="" src="assets/images/image_9.png" style="width: 278px; height: 203px;"><br>
+	<br>
+	&nbsp;</p>
+<p>
+	3. Enter all the details like on the screenshot below. Important - change the cronjob link (Command) to your personal one. You can find it in Freelance Cockpit 2 under <em>Settings</em> -&gt; <em>Cronjob</em><br>
+	<strong>Note that you have to enter &quot;wget&quot; in front of the command link.</strong></p>
+<p>
+	<img alt="" src="assets/images/image_10.png" style="width: 692px; height: 541px;"></p>
+<p>
+	<br>
+	<br>
+	<br>
+	&nbsp;</p>
+<h3>
+	How to setup a cronjob in cPanel</h3>
+<p>
+	<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/bmBjg1nD5yA" width="560"></iframe></p>
+<p>
+	Video by&nbsp;<a class="yt-uix-sessionlink yt-user-name " data-sessionlink="ei=ZQU1UciYO8TM_gaDpIDQBw&amp;feature=watch" dir="ltr" href="http://www.youtube.com/user/SiteServing?feature=watch" style="margin: 0px 0px 0px 10px; padding: 0px; border: 0px; font-size: 13px; background-color: transparent; cursor: pointer; color: rgb(51, 51, 51); text-decoration: none; display: inline-block; height: 22px; font-weight: bold; font-family: arial, sans-serif; line-height: 13px;">SiteServing</a></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="paypal_ipn">
+	<h3>Paypal IPN</h3><hr class="notop">
+<p>
+	If you like to use the Paypal IPN feature make sure you have added the IPN link (can be found in <em>Settings</em> -&gt; <em>Paypal</em>) to your Paypal account. Here is a short Youtube video which explains how to set the IPN link to your Paypal account&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/UviFqoizf5o" width="420"></iframe></p>
+<p>
+	Video by&nbsp;<a class="yt-uix-sessionlink yt-user-name " data-sessionlink="ei=lQQ1UYeMAcSg_QaWx4GgBA&amp;feature=watch" dir="ltr" href="http://www.youtube.com/user/WebifyWs?feature=watch" style="margin: 0px 0px 0px 10px; padding: 0px; border: 0px; font-size: 13px; background-color: transparent; cursor: pointer; color: rgb(51, 51, 51); display: inline-block; height: 22px; font-weight: bold; font-family: arial, sans-serif; line-height: 13px;">WebifyWs</a></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="faq">
+	<h3>FAQ</h3><hr class="notop">
+<p>
+	&nbsp;</p>
+<p class="info">
+	If you get 404 page not found error after installation.</p>
+<div style="margin-left: 40px;">
+	In this case your server needs the RewriteBase option to be set. Open the .htaccess file in the main folder and add the following line to it:</div>
+<pre style="margin-left: 40px;">
+RewriteBase / </pre>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<div style="margin-left: 40px;">
+	The .htaccess should look like this:</div>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<pre style="margin-left: 40px;">
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteBase /</pre>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<div style="margin-left: 40px;">
+	If you have installed the application into a sub folder you need to add the sub folder name after the /&nbsp;</div>
+<div style="margin-left: 40px;">
+	The .htaccess file should look like this in this case:</div>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<pre style="margin-left: 40px;">
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteBase /your_sub_folder/</pre>
+<div>
+	&nbsp;</div>
+<p class="info">
+	On <strong>Dreamhost</strong> you have to amend the .htaccess. If you get a &ldquo;No Input File&rdquo; error.</p>
+<div style="margin-left: 40px;">
+	The htaccess file should look like this:</div>
+<pre style="margin-left: 40px;">
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/?$1 [L]
+RewriteBase /</pre>
+<div>
+	&nbsp;</div>
+<p class="info">
+	If you get &ldquo;no input file specified&rdquo; error on <strong>goDaddy</strong> web host</p>
+<div style="margin-left: 40px;">
+	&nbsp;you need to change the .htaccess as follows:&nbsp;</div>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<pre style="margin-left: 40px;">
+&lt;IfModule mod_rewrite.c&gt; 
+RewriteEngine On 
+RewriteCond $1 !\.(gif|jpe?g|png)$ [NC] 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /index.php?/$1 [L] 
+&lt;/IfModule&gt; </pre>
+<div>
+	&nbsp;</div>
+<p class="info">
+	The following error message comes up:<br>
+	<br>
+	Warning: Unexpected character in input: &#39;\&#39; (ASCII=92) state=1 in /FreelanceCockpit/sparks/php-activerecord/0.0.2/libraries/phpactiverecord.php on line 48<br>
+	Parse error: syntax error, unexpected T_STRING in /FreelanceCockpit/sparks/php-activerecord/0.0.2/libraries/phpactiverecord.php on line 48</p>
+<div style="margin-left: 40px;">
+	This error means that your servers PHP version is not 5.3 or higher. Contact your web host in order to update your PHP version to 5.3 or higher.</div>
+<div style="margin-left: 40px;">
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<p class="info">
+	If you get a 500 Error after the installation try the following as .htaccess</p>
+<pre style="margin-left: 40px;">
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|robots\.txt)
+RewriteRule ^(.*)$ /index.php?/$1 [L]</pre>
+<p>
+	&nbsp;</p>
+<p class="info">
+	The &quot;System Check&quot; returns that the database file is not writable.</p>
+<p style="margin-left: 40px;">
+	The database file contains your database configuraion and it is located under &quot;application/config/database.php&quot;. This file must be writeable during the installation process so give the file write permission 775 using your FTP application or the web interface of your webhost. Make shure you change the permissions back to 644 once the installation is completed.</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p class="info">
+	The &quot;System Check&quot; returns that one or more PHP extentions are not loaded.</p>
+<p style="margin-left: 40px;">
+	<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">Make sure you have all required PHP extentions activated. You may have to contact your web host in order to activate the missing extentions.</span></p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p class="info">
+	How can I change the invoice layout?</p>
+<p style="margin-left: 40px;">
+	<span style="font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px;">You can change the layout by changing the file called &quot;preview.php&quot; which is located under &quot;appliaction/views/blackline/invoices/&quot;. Only change this file if you have further HTML and PHP knowledge!</span></p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="sources_and_credits">
+	<h3>Sources and Credits</h3><hr class="notop">
+<p>
+	I&#39;ve used the following images, icons or other files as listed.</p>
+<ul style="margin-left: 40px;">
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Codeigniter 2.1.1 - PHP Framework |&nbsp;<a href="http://codeigniter.com/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Codeigniter</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		jQuery - Javascript Framework |&nbsp;<a href="http://www.jquery.com/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">jQuery</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Bootstrap - HTML Framework | <a href="http://twitter.github.com/bootstrap">Bootstrap</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Ckeditor - WYSIWYG Editor |&nbsp;<a href="http://ckeditor.com/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Ckeditor</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		bootstrap-wysihtml5 -&nbsp;WYSIWYG Editor | <a href="http://jhollingworth.github.com/bootstrap-wysihtml5/">wysihtml5</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Chosen - Select plugin for jQuery |&nbsp;<a href="http://www.jacklmoore.com/colorbox" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">C</a><a href="http://harvesthq.github.com/chosen/">hosen</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		jscrollpane - Scroll plugin for jQuery |&nbsp;jscrollpane</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Datatables - Datatables plugin for jQuery |&nbsp;<a href="http://datatables.net/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Datatables</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Validation - Form Validation plugin for jQuery |&nbsp;<a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Validation</a></li>
+	<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		Dompdf - PDF Generator script |&nbsp;<a href="http://code.google.com/p/dompdf/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Dompdf</a></li>
+</ul>
+<hr>
+<p>
+	Once again, thank you so much for purchasing Freelance Cockpit 2. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this theme. No guarantees, but I&#39;ll do my best to assist.&nbsp;</p>
+<p>
+	<strong>Luxsys</strong></p>
+</section>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[04-Aug-2015 08:01:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/freelance/install/install.php on line 557
+[04-Aug-2015 08:01:38 UTC] PHP Stack trace:
+[04-Aug-2015 08:01:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/freelance/install/index.php:0
+[04-Aug-2015 08:01:38 UTC] PHP   2. require() /home/ubuntu/workspace/freelance/install/index.php:33
